@@ -1,0 +1,9 @@
+<h1> Search result </h1>
+
+<%= link_to 'Back', books_path %>
+
+<ol>
+  <% @books.each do |book| %>
+    <li> <%= link_to book.title, book_path(book) %> </li>
+  <% end %>
+</ol>
