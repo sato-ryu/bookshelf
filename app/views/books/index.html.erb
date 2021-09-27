@@ -1,11 +1,11 @@
 <h1>Search Books</h1>
 
-<%= form_with url: search_books_path, method: :get, local: true do |f| %>
+<%= form_with url: search_books_path, method: :get, local: true, id: :search_form do |f| %>
   <%= f.label :genere %>
   <%= f.select :genre_id, options_from_collection_for_select(@genres, :id, :name) %>
 
   <%= f.label :title %>
-  <%= f.select :book_title, [] %>
+  <%= f.select :title, [] %>
 
   <%= f.submit 'Search' %>
 <% end %>
